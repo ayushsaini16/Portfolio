@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* css variables */
+
+:root {
+  --heading: rgb(0 10 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --black: #212529;
+  --helper: #8490ff;
+  --helper-tint: #f3f3f3;
+  --bg: rgb(249 249 255);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport: linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowSupport: 0px 2px 20px 0px rgb(132 144 255 / 60%);
+}
+
+html {
+  font-size: 62.5%; /*1 rem= 10px   */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.83rem;
+  font-weight: 400;
+}
+
+p {
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.btn {
+  background: var(--gradientSupport);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  color: var(--helper-tint);
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.btn:hover,
+.btn:active {
+  box-shadow: var(--shadowSupport);
+}
+/*    Header section    */
+
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 6.8rem;
+  height: 7.1rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.navbar-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: color 0.3s linear;
+}
+
+.navbar-lists a:hover,
+.navbar-lists a:active {
+  color: var(--helper);
+}
+
+/* ========================== 
+      Reusable Section 
+  ============================== */
+.section {
+  padding: 9rem 0;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr , 1fr; */
+}
+.grid-three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-four-column {
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr , 1fr; */
+}
+.common-heading {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: 6rem;
+  text-transform: capitalize;
+  position: relative;
+}
+.common-heading::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--helper);
+}
+.common-heading::after {
+  content: "";
+  position: absolute;
+  top: 118%;
+  left: 1.5rem;
+  min-width: 20rem;
+  height: 0.3rem;
+  background: var(--helper);
+}
+/* ========================== 
+      Hero Section 
+  ============================== */
+.section {
+  background-color: var(--bg);
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-top-data {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--helper);
+}
+.hero-heading {
+  color: var(--heading);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6.4rem;
+}
+.hero-para {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  max-width: 60rem;
+}
+.section-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
+  max-width: 80%;
+}
+
+/* ========================== 
+      Bio Section 
+  ============================== */
+
+.bio-img {
+  max-width: 80%;
+  box-shadow: -2rem -2rem var(--helper);
+  display: inline-block;
+}
+
+.bio-in-data {
+  display: flex;
+  flex-direction: column;
+}
+.section-bio-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-data-stats {
+  display: flex;
+  flex-direction: column;
+  padding: 6.4rem 0;
+  gap: 3rem;
+}
+
+.bio-stats h3 {
+  margin-bottom: 1rem;
+}
+
+.bio-progress-bar {
+  width: 90%;
+  height: 0.8rem;
+  background-color: var(--para-tint);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.bio-progress-bar::before {
+  content: "";
+  position: absolute;
+  width: 99%;
+  top: 0;
+  left: 0;
+  height: inherit;
+  background: var(--gradientSupport);
+  border-radius: 10rem;
+}
+
+.bio-progress-2::before {
+  width: 90%;
+}
+
+.bio-progress-3::before {
+  width: 85%;
+}
+.bio-progress-4::before {
+  width: 70%;
+}
+.bio-progress-5::before {
+  width: 50%;
+}
+
+.bio-progress-bar span {
+  position: absolute;
+  top: 1.8rem;
+  width: 4rem;
+  height: 2rem;
+  left: 95%;
+  background: var(--helper);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: 0;
+}
+
+.bio-progress-2 span {
+  left: 86%;
+}
+.bio-progress-3 span {
+  left: 81%;
+}
+.bio-progress-4 span {
+  left: 66%;
+}
+.bio-progress-5 span {
+  left: 46%;
+}
+
+/* to create a caret */
+
+.bio-progress-bar span::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.8rem solid var(--helper);
+  border-color: transparent;
+  border-bottom-color: var(--helper);
+  top: -1.6rem;
+}
+
+/* ========================== 
+      Portfolio Section 
+  ============================== */
+
+.section-portfolio {
+  background: var(--bg);
+  transition: all 0.7s linear;
+}
+
+.section-portfolio p {
+  max-width: 60rem;
+}
+
+.p-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.4rem;
+  margin: 6.4rem 0;
+}
+
+.portfolio-images {
+  gap: 3.4rem;
+}
+
+.portfolio-images img {
+  width: 100%;
+  position: relative;
+  border-radius: 0.7rem;
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradientSupport);
+  transform: translateY(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7rem;
+}
+
+.img-overlay:hover > .overlay {
+  transform: translateY(0);
+  opacity: 0.7;
+  transition: all 0.7s linear;
+  cursor: pointer;
+}
+
+.img-overlay .common-heading {
+  color: var(--white);
+  margin: 0;
+  text-decoration: none;
+}
+
+.p-btn:hover {
+  transform: translateY(-1rem);
+}
+
+.p-btn-active {
+  transform: translateY(-1rem);
+}
