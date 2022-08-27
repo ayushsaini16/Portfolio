@@ -378,10 +378,10 @@ li {
   text-decoration: none;
 }
 
-.p-btn:hover {
+.p-btn-active {
   transform: translateY(-1rem);
 }
 
-.p-btn-active {
-  transform: translateY(-1rem);
+.p-image-not-active {
+  display: none;
 }
